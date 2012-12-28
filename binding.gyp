@@ -3,7 +3,7 @@
     {
       "target_name": "node-gd",
       "sources": ["node-gd.cc"],
-      "libraries": ["-lgd"],
+      "libraries": ["-L/usr/local/lib -lgd"],
       "include_dirs": ['/usr/local/include']
     }
   ]
