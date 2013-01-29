@@ -3,8 +3,13 @@
     {
       "target_name": "node-gd",
       "sources": ["node-gd.cc"],
-      "libraries": ["-L/usr/local/lib -lgd"],
-      "include_dirs": ['/usr/local/include']
+      "libraries": ["-lgd"],
+      "conditions": [
+          [ 'OS=="freebsd"', {
+            "libraries": ["-L/usr/local/lib"],
+            "include_dirs": ["/usr/local/include"],
+          }]
+      ]
     }
   ]
 }
